@@ -50,4 +50,4 @@ erDiagram
     PENGGUNA ||--o{ PRODUK : "menambahkan/mengelola"
     KATEGORI ||--|{ PRODUK : "mengelompokkan"
 
-    comming soon
+LINK DESIGN BY STITCH : https://stitch.withgoogle.com/projects/1252282857195522976?pli=1
