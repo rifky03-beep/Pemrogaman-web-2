@@ -31,6 +31,7 @@ erDiagram
         int id_user PK
         string nama_lengkap
         string username
+        string password
         string role
     }
     KATEGORI {
@@ -38,16 +39,34 @@ erDiagram
         string nama_kategori
         string deskripsi
     }
-    PRODUK {
-        int id_produk PK
-        string nama_produk
+    OBAT {
+        int id_obat PK
+        string nama_obat
         int id_kategori FK
         int id_user FK
         float harga
+        string komposisi
         string status_aktif
     }
+    TRANSAKSI {
+        int id_transaksi PK
+        date tanggal_transaksi
+        int id_user FK
+        float total_harga
+        string status_pesanan
+    }
+    DETAIL_TRANSAKSI {
+        int id_detail PK
+        int id_transaksi FK
+        int id_obat FK
+        int jumlah
+        float subtotal
+    }
 
-    PENGGUNA ||--o{ PRODUK : "menambahkan/mengelola"}
-    KATEGORI ||--|{ PRODUK : "mengelompokkan"}
+    PENGGUNA ||--o{ OBAT : "mengelola"
+    PENGGUNA ||--o{ TRANSAKSI : "melakukan"
+    KATEGORI ||--|{ OBAT : "mengelompokkan"
+    TRANSAKSI ||--|{ DETAIL_TRANSAKSI : "memiliki"
+    OBAT ||--o{ DETAIL_TRANSAKSI : "termasuk dalam"
 
 LINK DESIGN BY STITCH : https://stitch.withgoogle.com/projects/1252282857195522976?pli=1
