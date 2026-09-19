@@ -69,4 +69,4 @@ erDiagram
     TRANSAKSI ||--|{ DETAIL_TRANSAKSI : "memiliki"
     OBAT ||--o{ DETAIL_TRANSAKSI : "termasuk dalam"
 
-LINK DESIGN BY STITCH : https://stitch.withgoogle.com/projects/1252282857195522976?pli=1
+LINK : https://stitch.withgoogle.com/projects/1252282857195522976?pli=1
